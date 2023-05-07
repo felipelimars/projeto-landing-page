@@ -1,0 +1,668 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+header nav {
+    background-color: #201f25;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding-left: 5vh;
+    position: fixed;
+    top: 0;
+}
+
+.logo {
+    padding-right: 2vw;
+}
+
+header nav a {
+    padding: 0 7vh 0 0;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+}
+
+header a:hover {
+    color: #D0C2B0;
+    transform: scale(0.9);
+}
+
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 10vh 8vh 0 8vh;
+}
+
+.inicio-texto {
+    width: 50%;
+    padding-bottom: 10vh;
+}
+
+.imagem-inicio {
+    width: 45%;
+}
+
+#inicio h1 {
+    font-size: 7vh;
+    margin-bottom: 5vh;
+    color: #000000;
+}
+
+.futuro {
+    background-color: #D1C2B0;
+}
+
+#inicio h2 {
+    order: 0;
+    display: flex;
+    font-size: 4.0vh;
+    color: #000000;
+}
+
+#inicio button {
+    margin-top: 5vh;
+    width: 10vw;
+    height: 8vh;
+    font-size: 1rem;
+    border-radius: 1vh;
+    background-color: transparent;
+    border: 2px solid #000000;
+    color: #000000;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+#inicio button:hover {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.imagem-inicio img {
+    height: 55vh;
+    width: 100%;
+    order: 1;
+}
+
+#produtos {
+    background-color: #D1C2B0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5vw;
+    flex-direction: row-reverse;
+    column-gap: 19vh;
+    padding-top: 20vh;
+}
+
+.texto-produtos {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    margin-right: 5vw;
+    align-items: flex-start;
+    gap: 2vh;
+}
+
+.texto-produtos h1 {
+    font-size: 8vh;
+    color: #D1C2B0;
+    background-color: #ffffff;
+    margin-bottom: 2vh;
+}
+
+.texto-produtos h2 {
+    max-width: 70vw;
+    display: flex;
+    font-size: 4.5vh;
+    color: #ffffff;
+}
+
+.botao-produtos {
+    margin-top: 5vh;
+    width: 10vw;
+    height: 8vh;
+    font-size: 1rem;
+    border-radius: 1vh;
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    background-color: transparent;
+    transition: transform 0.2s ease-in-out;
+}
+
+#produtos button:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.imagem-produtos img {
+    height: auto;
+    width: 40vw;
+}
+
+
+
+#promocoes {
+    background-image: url(./imagens/casinhas-coloridas-com-roupas-penduradas-do-lado-de-fora-em-um-bairro-suburbano.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.texto-promo {
+    display: flex;
+    flex-direction: column;
+    max-width: 50vw;
+    align-items: center;
+}
+
+.texto-promo h1 {
+    font-size: 7vh;
+    color: #ffffff;
+
+}
+
+.texto-promo h2 {
+    padding: 2vh;
+    max-width: 80vw;
+    font-size: 4vh;
+    color: #ffffff;
+    font-weight: 400;
+    background: rgba(35, 35, 35, 0.5)
+}
+
+.botao-promo {
+    margin-top: 5vh;
+    width: 10vw;
+    height: 8vh;
+    font-size: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+#promocoes button:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+
+#promocoes img {
+    height: auto;
+    width: 50vw;
+}
+
+#cases {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5vh;
+    padding-top: 10vh;
+}
+
+.texto-cases {
+    max-width: 60vw;
+    font-size: 4.5vh;
+    color: #000000;
+    font-weight: 200;
+}
+
+.video-cases {
+    height: 60vh;
+    width: 70vw;
+}
+
+.botao-cases {
+    width: 10vw;
+    height: 8vh;
+    font-size: 1rem;
+    background-color: rgb(243, 243, 243);
+    transition: transform 0.2s ease-in-out;
+    border-radius: 1vh;
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#cases button:hover {
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    transform: scale(0.9);
+    border: 2px solid #000000;
+}
+
+#contato {
+    background-color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    height: 60vh;
+    width: 30vw;
+    align-items: center;
+    flex-direction: column;
+    padding: 10vh;
+    gap: 2vh;
+    border-radius: 1vh;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.text-email,
+.text-password,
+.text-user {
+    display: none;
+}
+
+.box-email,
+.box-password,
+.box-user {
+    outline: none;
+    border: transparent;
+    font-size: 2vh;
+    width: 20vw;
+    height: 10vh;
+    background-color: transparent;
+}
+
+form {
+    font-size: 3vh;
+    font-weight: bold;
+    color: #000000;
+    border-radius: 0.5vh;
+    width: 19.5vw;
+    height: 4.5vh;
+    text-align: left;
+    padding-left: 0.5vh;
+    background-color: #D1C2B0;
+}
+
+#error {
+    font-size: 2vh;
+    color: rgb(255, 0, 0);
+    padding-top: 1vh;
+}
+
+.upfour {
+    color: #fff;
+}
+
+.container .box-button {
+    width: 20vw;
+    height: 5vh;
+    font-size: 1.5vh;
+    font-weight: bold;
+    border-radius: 1vh;
+    background-color: black;
+    color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.container .box-button:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #000000;
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+footer {
+    background-color: #201f25;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 10vh;
+    font-family: Roboto;
+    color: white;
+    width: 100%;
+}
+
+footer img {
+    height: 5vh;
+    padding-left: 20px;
+    transition: transform 0.1s ease-in-out;
+}
+
+footer img:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+
+.dev-footer {
+    padding-left: 60vh;
+    font-size: 1.5vh;
+}
+
+
+
+@media screen and (min-device-width : 375px) and (max-device-width : 667px) {
+/* Iphone 6/7/8 responsividade.*/
+
+
+    header nav a {
+        padding: 0 1vh 0 0;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1vh;
+    }
+
+    header img {
+        height: auto;
+        width: 7vh;
+    }
+
+
+    #inicio {
+        display: flex;
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    .inicio-texto {
+        padding-bottom: 10vh;
+        width: 100%;
+    }
+
+    .imagem-inicio {
+        padding-right: 7vw;
+        width: 45%;
+    }
+
+    #inicio h1 {
+
+        font-size: 4vh;
+        margin-bottom: 2vh;
+        color: #000000;
+    }
+
+    .futuro {
+        background-color: #D1C2B0;
+    }
+
+    #inicio h2 {
+        font-size: 3vh;
+    }
+
+    #inicio button {
+        margin-top: 5vh;
+        width: 18vw;
+        height: 7vh;
+        font-size: 1.5vh;
+    }
+
+    .imagem-inicio {
+        display: flex;
+        justify-content: center;
+        padding-top: 10vh;
+    }
+
+    .imagem-inicio img {
+        height: 30vh;
+        width: 70vw;
+        margin-left: 8vw;
+    }
+
+    #produtos {
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        padding: 0vw;
+        flex-direction: column;
+        column-gap: 19vh;
+        padding-top: vh;
+    }
+
+    .texto-produtos {
+        width: 100vw;
+        margin-right: 5vw;
+        gap: 2vh;
+    }
+
+    .texto-produtos h1 {
+        font-size: 4vh;
+        color: #D1C2B0;
+        background-color: #ffffff;
+        margin-bottom: 2vh;
+    }
+
+    .texto-produtos h2 {
+        max-width: 70vw;
+        display: flex;
+        font-size: 4.5vh;
+        color: #ffffff;
+    }
+
+    .botao-produtos {
+        margin-top: 5vh;
+        width: 18vw;
+        height: 7vh;
+        font-size: 1.5vh;
+        border-radius: 1vh;
+        border: 2px solid #fff;
+    }
+
+    #produtos button:hover {
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    .imagem-produtos img {
+        display: none;
+    }
+
+    .video-cases {
+        height: 30vh;
+        width: 95vw;
+    }
+
+    .botao-cases {
+        width: 20vw;
+        height: 8vh;
+        font-size: 1.5vh;
+        background-color: rgb(243, 243, 243);
+        transition: transform 0.2s ease-in-out;
+        border-radius: 1vh;
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .texto-promo h1 {
+        font-size: 4vh;
+        color: #ffffff;
+
+    }
+
+    .texto-promo h2 {
+        padding: 2vh;
+        max-width: 80vw;
+        font-size: 3vh;
+        color: #ffffff;
+        font-weight: 400;
+        background: rgba(35, 35, 35, 0.5)
+    }
+
+    .botao-promo {
+        margin-top: 4vh;
+        width: 18vw;
+        height: 7vh;
+        font-size: 1.5vh;
+        border: none;
+        border-radius: 1vh;
+        background-color: #000000;
+        color: #ffffff;
+        font-weight: bold;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .container {
+        display: flex;
+        height: 60vh;
+        width: 80vw;
+        align-items: center;
+        flex-direction: column;
+        padding: 10vh;
+        gap: 2vh;
+        border-radius: 1vh;
+        border: 2px solid #000000;
+        color: #000000;
+    }
+
+    .text-email,
+    .text-password,
+    .text-user {
+        display: none;
+    }
+
+    .box-email,
+    .box-password,
+    .box-user {
+        outline: none;
+        border: transparent;
+        font-size: 2vh;
+        width: 30vw;
+        height: 10vh;
+        background-color: transparent;
+    }
+
+    form {
+        font-size: 3vh;
+        font-weight: bold;
+        color: #000000;
+        border-radius: 0.5vh;
+        width: 50vw;
+        height: 4.5vh;
+        text-align: left;
+        padding-left: 0.5vh;
+        background-color: #D1C2B0;
+    }
+
+    #error {
+        font-size: 2vh;
+        color: rgb(255, 0, 0);
+        padding-top: 1vh;
+    }
+
+    .upfour {
+        color: #fff;
+    }
+
+    .container .box-button {
+        width: 20vw;
+        height: 5vh;
+        border-radius: 1vh;
+        background-color: black;
+        color: #fff;
+        transition: transform 0.2s ease-in-out;
+
+    }
+
+    .container .box-button:hover {
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border: 2px solid #000000;
+        cursor: pointer;
+        transform: scale(0.9);
+    }
+
+    footer {
+        background-color: #201f25;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 15vh;
+        font-family: Roboto;
+        color: white;
+        width: 100%;
+    }
+
+    footer img {
+        height: 3vh;
+        padding-left: 1.5vw;
+        margin-bottom: 6vh;
+    }
+
+    .icons .dev-footer {
+        display: none;
+    }
+}
+
+
+@media screen and (min-device-width : 800px) and (max-device-width : 1280px) {
+/* Telas de 1200 */
+
+
+    header nav a {
+        padding: 0 4vh 0 0;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5vh;
+    }
+
+    #inicio button {
+        font-size: 1.5vh;
+    }
+    
+    header img {
+        height: auto;
+        width: 14vh;
+    }
+
+
+    #inicio h1 {
+        font-size: 7vh;
+        margin-bottom: 5vh;
+        color: #000000;
+    }
+    
+    #inicio h2 {
+        padding-right: 5vw;
+    }
+    .icons span{
+     padding-left: 24vw;
+    }
+
+    .botao-promo{
+    width: 12vw;
+    }
+
+    .dev-footer {
+        padding-left: 55vh;
+        font-size: 1.5vh;
+    }
+}
