@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;700&display=swap');
 
-html {
-    scroll-behavior: smooth;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, Arial, sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
 }
 
 header nav {
@@ -22,6 +23,7 @@ header nav {
     padding-left: 5vh;
     position: fixed;
     top: 0;
+    z-index: 2;
 }
 
 .logo {
@@ -29,10 +31,13 @@ header nav {
 }
 
 header nav a {
-    padding: 0 7vh 0 0;
+    padding: 0 6vh 0 0;
     color: #fff;
     text-decoration: none;
     transition: transform 0.1s ease-in-out;
+    font-family: Arial, sans-serif;
+    font-size: 1.3vh;
+
 }
 
 header a:hover {
@@ -46,6 +51,7 @@ header a:hover {
     align-items: center;
     height: 100vh;
     padding: 10vh 8vh 0 8vh;
+    background-color: rgb(255, 255, 255);
 }
 
 .inicio-texto {
@@ -55,7 +61,28 @@ header a:hover {
 
 .imagem-inicio {
     width: 45%;
+    transition: transform 0.8s ease;
 }
+
+.imagem-inicio:hover {
+    transform: scale(1.1);
+}
+
+.imagem-inicio:not(:hover) {
+    transform: scale(1);
+}
+
+#btnTopo {
+    display: none; 
+    position: fixed; 
+    bottom: 2vh; 
+    right: 0.5vw; 
+    z-index: 99; 
+    color: #fff; 
+    border: white; 
+    cursor: pointer; 
+  }
+  
 
 #inicio h1 {
     font-size: 7vh;
@@ -64,13 +91,38 @@ header a:hover {
 }
 
 .futuro {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+.futuro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 50%;
     background-color: #D1C2B0;
+    animation: animate-text 3s linear forwards;
+    z-index: -1;
 }
 
+@keyframes animate-text {
+    0% {
+      width: 0%;
+      left: 0%;
+    }
+    100% {
+      width: 100%;
+      left: 0.1vh;
+    }
+}
+  
 #inicio h2 {
     order: 0;
     display: flex;
-    font-size: 4.0vh;
+    font-size: 4vh;
     color: #000000;
 }
 
@@ -156,9 +208,17 @@ header a:hover {
 .imagem-produtos img {
     height: auto;
     width: 40vw;
+    transition: transform 0.8s ease;
+
 }
 
+.imagem-produtos img:hover {
+    transform: scale(1.1);
+}
 
+.imagem-produtos img:not(:hover) {
+    transform: scale(1);
+}
 
 #promocoes {
     background-image: url(./imagens/casinhas-coloridas-com-roupas-penduradas-do-lado-de-fora-em-um-bairro-suburbano.jpg);
@@ -219,7 +279,7 @@ header a:hover {
 }
 
 #cases {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 245, 245);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -263,7 +323,7 @@ header a:hover {
 }
 
 #contato {
-    background-color: #ffffff;
+    background-color: rgb(245, 245, 245);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -293,11 +353,15 @@ header a:hover {
 .box-password,
 .box-user {
     outline: none;
-    border: transparent;
+    border-radius: 0.5rem;
+    border: rgb(166, 166, 166) solid;
     font-size: 2vh;
     width: 20vw;
-    height: 10vh;
+    margin-bottom: 2vh;
+    margin-top: 3.5vh;
+    height: 5vh;
     background-color: transparent;
+    padding-left: 1vw;
 }
 
 form {
@@ -305,10 +369,11 @@ form {
     font-weight: bold;
     color: #000000;
     border-radius: 0.5vh;
-    width: 19.5vw;
+    width: 20vw;
     height: 4.5vh;
     text-align: left;
-    padding-left: 0.5vh;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
     background-color: #D1C2B0;
 }
 
@@ -325,6 +390,7 @@ form {
 .container .box-button {
     width: 20vw;
     height: 5vh;
+    margin-top: 1vh;
     font-size: 1.5vh;
     font-weight: bold;
     border-radius: 1vh;
@@ -353,8 +419,8 @@ footer {
 }
 
 footer img {
-    height: 5vh;
-    padding-left: 20px;
+    height: 3.5vh;
+    padding-left: 1vw;
     transition: transform 0.1s ease-in-out;
 }
 
@@ -363,27 +429,30 @@ footer img:hover {
     cursor: pointer;
 }
 
-.dev-footer {
-    padding-left: 60vh;
-    font-size: 1.5vh;
+.icon-fb{
+    margin-left: 1.5vw;
 }
 
-
+.dev-footer {
+    padding-left: 31.5vw;
+    font-size: 1.5vh;
+}
 
 @media screen and (min-device-width : 375px) and (max-device-width : 667px) {
 /* Iphone 6/7/8 responsividade.*/
 
 
     header nav a {
-        padding: 0 1vh 0 0;
+        padding: 0 3vw 0 0;
         color: #fff;
         text-decoration: none;
-        font-size: 1vh;
+        font-size: 0.7vh;
     }
 
     header img {
         height: auto;
-        width: 7vh;
+        width: 6vh;
+        margin: 0 4vw 0 1vw;
     }
 
 
@@ -472,8 +541,6 @@ footer img:hover {
         width: 18vw;
         height: 7vh;
         font-size: 1.5vh;
-        border-radius: 1vh;
-        border: 2px solid #fff;
     }
 
     #produtos button:hover {
@@ -543,61 +610,32 @@ footer img:hover {
         color: #000000;
     }
 
-    .text-email,
-    .text-password,
-    .text-user {
-        display: none;
-    }
-
     .box-email,
     .box-password,
     .box-user {
-        outline: none;
-        border: transparent;
         font-size: 2vh;
-        width: 30vw;
-        height: 10vh;
-        background-color: transparent;
+        width: 50vw;
+        height: 5vh;
+
     }
 
     form {
-        font-size: 3vh;
-        font-weight: bold;
-        color: #000000;
-        border-radius: 0.5vh;
         width: 50vw;
         height: 4.5vh;
-        text-align: left;
-        padding-left: 0.5vh;
+        padding-left: 1vw;
+        margin-left: 1vw;
         background-color: #D1C2B0;
     }
 
     #error {
-        font-size: 2vh;
+        font-size: 1.5vh;
         color: rgb(255, 0, 0);
         padding-top: 1vh;
-    }
-
-    .upfour {
-        color: #fff;
     }
 
     .container .box-button {
         width: 20vw;
         height: 5vh;
-        border-radius: 1vh;
-        background-color: black;
-        color: #fff;
-        transition: transform 0.2s ease-in-out;
-
-    }
-
-    .container .box-button:hover {
-        background-color: #ffffff;
-        color: rgb(0, 0, 0);
-        border: 2px solid #000000;
-        cursor: pointer;
-        transform: scale(0.9);
     }
 
     footer {
@@ -605,7 +643,7 @@ footer img:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 15vh;
+        height: 10vh;
         font-family: Roboto;
         color: white;
         width: 100%;
@@ -614,24 +652,28 @@ footer img:hover {
     footer img {
         height: 3vh;
         padding-left: 1.5vw;
-        margin-bottom: 6vh;
+        margin-bottom: 3vh;
     }
 
     .icons .dev-footer {
         display: none;
     }
+
+    #btnTopo{
+        width: 8vw;
+    }
 }
 
 
 @media screen and (min-device-width : 800px) and (max-device-width : 1280px) {
-/* Telas de 1200 */
+/* Telas de 1280 x 800 */
 
 
     header nav a {
         padding: 0 4vh 0 0;
         color: #fff;
         text-decoration: none;
-        font-size: 1.5vh;
+        font-size: 1.1vh;
     }
 
     #inicio button {
@@ -640,9 +682,8 @@ footer img:hover {
     
     header img {
         height: auto;
-        width: 14vh;
+        width: 10vh;
     }
-
 
     #inicio h1 {
         font-size: 7vh;
@@ -653,6 +694,7 @@ footer img:hover {
     #inicio h2 {
         padding-right: 5vw;
     }
+
     .icons span{
      padding-left: 24vw;
     }
@@ -661,8 +703,145 @@ footer img:hover {
     width: 12vw;
     }
 
-    .dev-footer {
-        padding-left: 55vh;
+    footer .dev-footer {
+        padding-left: 28vw;
         font-size: 1.5vh;
     }
+
+    .botao-cases {
+        font-size: 1.5vh;
 }
+}
+
+@media screen and (min-device-width : 820px) and (max-device-width : 1180px) {
+    /* Telas de 1180 x 820 Tablet Ipad Air */
+
+        .logo img{
+            width: 10vw;
+        }
+
+        header nav a {
+            padding: 0 4vh 0 0;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1vh;
+        }
+
+        header img {
+            height: auto;
+            width: 5vh;
+        }
+
+        .imagem-inicio img{
+            height: auto;
+            width: 40vw;
+            margin-bottom: 44vh;
+
+        }
+
+        #inicio button {
+            font-size: 1.4vw;
+            width: 13vw;
+            height: 5vh;
+        }
+        
+        #inicio{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        
+        #inicio h1 {
+            font-size: 5.5vh;
+            margin-bottom: 5vh;
+            margin-top: 10vh;
+            color: #000000;
+        }
+        
+        #inicio h2 {
+            padding-right: 5vw;
+            font-size: 3vh;
+        }
+
+        #produtos{
+            flex-direction: column-reverse;
+        }
+
+        #produtos h1{
+            font-size: 7vh;
+        }
+
+        #produtos h2{
+            font-size: 3vw;
+        }
+
+        #produtos img{
+            margin-right: 5vw;
+            margin-bottom: 5vh;
+            width: auto;
+            height: 36vh;
+        }
+
+        #produtos .botao-produtos{
+            font-size: 1.4vw;
+            width: 13vw;
+            height: 5vh;
+            margin-bottom: 5vh;
+        }
+
+        #cases .video-cases{
+            width: 90vw;
+            height: 45vh;
+        }
+
+        #cases button{
+            font-size: 1.4vw;
+            width: 13vw;
+            height: 5vh;
+        }
+
+        #promocoes h1{
+            font-size: 4vh;
+        }
+
+        #promocoes button{
+            font-size: 1.4vw;
+            width: 13vw;
+            height: 5vh;
+        }
+
+        #contato .container {
+            width: 60vw;
+        }
+
+        #contato button{
+            width: 50vw;
+        }
+
+        .box-email,
+        .box-password,
+        .box-user {
+            width: 50vw;
+            height: 5vh;
+
+        }
+    
+        form {
+            width: 50vw;
+            height: 4.5vh;
+        }
+    
+        #error {
+            font-size: 1.5vh;
+            margin-left: 0.5vw;
+        }
+
+        footer span{
+        display: none;
+        }
+
+        main #btnTopo {
+        display: none;
+        }
+}
+
