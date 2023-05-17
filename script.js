@@ -1,3 +1,5 @@
+// Função formulário
+
 const inputButtonForm = document.querySelector('.box-button')
 console.log(inputButtonForm)
 
@@ -35,3 +37,26 @@ inputButtonForm.addEventListener('click', function (e) {
     alert('Seu formulário foi enviado com sucesso!')
 })
 
+// Função voltar ao topo
+
+window.onscroll = function() {
+    scrollFunction();
+  };
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("btnTopo").style.display = "block";
+    } else {
+      document.getElementById("btnTopo").style.display = "none";
+    }
+  }
+  
+  document.getElementById("btnTopo").onclick = function() {
+    scrollToTop();
+  };
+  
+  function scrollToTop() {
+    document.body.scrollTop = 0; /* Para navegadores Safari */
+    document.documentElement.scrollTop = 0; /* Para Chrome, Firefox, IE e Opera */
+  }
+  
