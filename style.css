@@ -73,6 +73,7 @@ header a:hover {
 }
 
 #btnTopo {
+    width: 2vw;
     display: none; 
     position: fixed; 
     bottom: 2vh; 

@@ -1,42 +1,38 @@
-// Função formulário
+// Função formulário contato
 
-const inputButtonForm = document.querySelector('.box-button')
-console.log(inputButtonForm)
+const inputButtonForm = document.querySelector('.box-button');
+console.log(inputButtonForm);
 
 inputButtonForm.addEventListener('click', function (e) {
-    e.preventDefault()
-    const error = document.querySelector('#error')
-    const inputNome = document.querySelector('#nome')
-    const inputEmail = document.querySelector('#email')
-    const inputSenha = document.querySelector('#senha')
+  e.preventDefault();
+  const error = document.querySelector('#error');
+  const inputNome = document.querySelector('#nome');
+  const inputEmail = document.querySelector('#email');
+  const inputSenha = document.querySelector('#senha');
 
-    if(!inputNome.value || !isNaN(inputNome.value)){
-        error.innerHTML += 'Por favor, digite um nome válido!' 
-        return
-    } else {
-        error.innerHTML = ''
-    } 
+  if (!inputNome.value || !isNaN(inputNome.value)) {
+    error.innerHTML = 'Por favor, digite um nome válido!';
+    return;
+  } 
 
-    if(!inputEmail.value || !isNaN(inputEmail.value)){
-        error.innerHTML += 'Por favor, digite um email válido!' 
-        return
-    } else {
-        error.innerHTML = ''
-    }
-    if(!inputSenha.value || !isNaN(inputSenha.value)){
-        error.innerHTML += 'Por favor, digite uma senha válida!' 
-        return
-    } else {
-        error.innerHTML = ''
-    }
+  if (!inputEmail.value || !isNaN(inputEmail.value)) {
+    error.innerHTML = 'Por favor, digite um email válido!';
+    return;
+  }
 
-    inputNome.value = ''
-    inputEmail.value = ''
-    inputSenha.value = ''
+  if (!inputSenha.value || !isNaN(inputSenha.value)) {
+    error.innerHTML = 'Por favor, digite uma senha válida!';
+    return;
+  }
 
-    alert('Seu formulário foi enviado com sucesso!')
-})
+  error.innerHTML = '';
 
+  inputNome.value = '';
+  inputEmail.value = '';
+  inputSenha.value = '';
+
+  alert('Seu formulário foi enviado com sucesso!');
+});
 // Função voltar ao topo
 
 window.onscroll = function() {
@@ -59,4 +55,3 @@ window.onscroll = function() {
     document.body.scrollTop = 0; /* Para navegadores Safari */
     document.documentElement.scrollTop = 0; /* Para Chrome, Firefox, IE e Opera */
   }
-  
